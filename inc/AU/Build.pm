@@ -28,7 +28,7 @@ sub new {
             'Alien::gmake' => 0.11, # needed for %{gmake} helper
         },
         alien_build_commands => [
-            "%{gmake} default googlepb CXXFLAGS=\"$protobuf_cxxflags\" USER_CPPFLAGS=\"$protobuf_flags -fPIC -DUPB_GOOGLEPB_NOREFLECTION\" $make_args",
+            "%{gmake} default CXXFLAGS=\"$protobuf_cxxflags\" USER_CPPFLAGS=\"$protobuf_flags -fPIC\" $make_args",
         ],
         alien_install_commands => [
             "$^X ../../scripts/install.pl %s",
@@ -54,7 +54,7 @@ sub alien_check_built_version {
     my ($version, $flags) = _check_flags(
         $builder, \%cxx_flags,
         compiler_flags  => '-I. ' . Alien::ProtoBuf->cflags,
-        linker_flags    => '-Llib -lupb.bindings.googlepb -lupb ' . Alien::ProtoBuf->libs,
+        linker_flags    => '-Llib -lupb ' . Alien::ProtoBuf->libs,
     );
 
     die "It seems something went wrong while building uPB"
@@ -72,7 +72,7 @@ sub alien_generate_manual_pkgconfig {
     $config->{keywords}{Libs} =
         '-L${pcfiledir}/lib ' .
         join " ", map "-l$_", qw(
-            upb.bindings.googlepb upb.pb upb.json upb.descriptor upb
+            upb.pb upb.json upb.descriptor upb
         );
 
     return $config;
