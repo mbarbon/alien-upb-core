@@ -1,7 +1,7 @@
 /Build
 /Build.bat
 /dev_Build.PL
-/Alien-uPB*
+/Alien-uPB-Core*
 /META.*
 /MYMETA.*
 /_build
