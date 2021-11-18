@@ -2,6 +2,10 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.18      2021-11-18 21:00:49 CET
+
+    - New revision of uPB (support for well-known types)
+
 0.17      2021-03-13 09:47:58 CET
 
     - Stop building googlepb binding
