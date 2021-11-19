@@ -2,6 +2,10 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.19      2021-11-19 12:35:54 CET
+
+    - New revision of uPB (fixes handling of timezones for timestamp types)
+
 0.18      2021-11-18 21:00:49 CET
 
     - New revision of uPB (support for well-known types)
