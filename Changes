@@ -2,6 +2,10 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.20_02   2026-10-01 12:37:37 CEST
+
+    - New revision of uPB (fixes another compilation error).
+
 0.20_01   2026-10-01 11:36:23 CEST
 
     - New revision of uPB (fixes compilation error).
