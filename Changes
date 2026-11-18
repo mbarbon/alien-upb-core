@@ -2,6 +2,10 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.21_01   2026-11-18 09:28:50 CET
+
+    - New revision of uPB (compatibility with cmake 4.x)
+
 0.21      2026-10-01 14:23:39 CEST
 
     - Release 0.20_02 as stable without changes
